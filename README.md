@@ -69,10 +69,3 @@ Each project folder contains its respective source code and assets.
    ```bash
    npm start
    ```
-
-## Contributions 🤝
-Contributions are welcome! Feel free to fork the repository and create a pull request with your changes.
-
-## License 📜
-This repository is licensed under the [MIT License](LICENSE).
-
