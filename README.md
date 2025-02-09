@@ -1,6 +1,3 @@
-Here's the full `README.md` file that includes all the details of your **Frontend Projects** repository, including the **Currency Converter** project:
-
-```markdown
 # All Frontend Projects
 
 This repository contains several frontend projects showcasing different features and functionalities. Below is a detailed description of each project:
@@ -62,4 +59,3 @@ Contributions are welcome! Feel free to fork the repository and create a pull re
 ## License 📜
 
 This repository is licensed under the [MIT License](LICENSE).
-```
