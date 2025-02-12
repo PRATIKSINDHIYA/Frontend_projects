@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: green;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container {
+            background-color: black;
+            color: green;
+            font-weight: bold;
+            width: 30%;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 255, 0, 0.5);
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+            justify-self: center;
+            margin-top: 100px;
+
+        }
+        .boxes6 {
+            margin-top: 100px;
+            background-color: black;
+            color: green;
+            font-weight: bold;
+            width: 30%;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(10, 74, 10, 0.5);
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+            justify-self: center;
+            text-align: center;
+            align-items: center;
+        }
+
+        .container:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 15px 45px rgba(0, 255, 0, 0.7);
+        }
+
+        .M {
+            padding-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes6 M"></div>
+    <div class="container">
+        <div class="boxes1 M"></div>
+        <div class="boxes2 M"></div>
+        <div class="boxes3 M"></div>
+        <div class="boxes4 M"></div>
+        <div class="boxes5 M"></div>
+    </div>
+
+    <!-- <script src="HackerTerminal.js"></script> -->
+
+    <script>
+        let blinkinterval
+        async function blink(val) {
+            let dot = "";
+            blinkinterval = setInterval(() => {
+                if (dot.length < 3) {
+                    dot += "."
+                }
+                else {
+                    dot = ""
+                }
+                val.innerText = val.innerText.split(".")[0] + dot;
+            }, 1000);
+
+        }
+        async function getdata() {
+            let data1 = document.querySelector(".boxes1")
+            let data2 = document.querySelector(".boxes2")
+            let data3 = document.querySelector(".boxes3")
+            let data4 = document.querySelector(".boxes4")
+            let data5 = document.querySelector(".boxes5")
+            let data6 = document.querySelector(".boxes6")
+
+
+            let names = "You'r_System_Hacked_Successfully"
+            for (let i = 0; i < names.length; i++) {
+                setTimeout(() => {
+                    data6.innerText += names[i];
+                }, 80 * i);
+            }
+            setTimeout(() => {
+                clearInterval(blinkinterval);
+                data1.innerText = "Initializing hacking";
+                blink(data1);
+                setTimeout(() => {
+                    clearInterval(blinkinterval);
+                    data1.innertext = "Initializing hacking"
+                    data2.innerText = "Reading your files";
+                    blink(data2);
+                    setTimeout(() => {
+                        clearInterval(blinkinterval);
+                        data1.innertext = "Reading your files"
+
+                        data3.innerText = "Password files detected";
+                        blink(data3);
+                        setTimeout(() => {
+                            clearInterval(blinkinterval);
+                            data1.innertext = "Password files detected"
+
+                            data4.innerText = "Sending all passwords and personal files to the server";
+                            blink(data4);
+                            setTimeout(() => {
+                                clearInterval(blinkinterval);
+                                data1.innertext = "Sending all passwords and personal files to the server"
+
+                                data5.innerText = "Cleaning up";
+                                blink(data5);
+                                setTimeout(() => {
+                                    clearInterval(blinkinterval);
+                                    data1.innertext = "Cleaning up"
+
+                                }, 3000);
+                            }, 3000);
+                        }, 3000);
+                    }, 3000);
+                }, 3000);
+            }, 3000);
+
+        }
+
+        getdata()
+    </script>
+</body>
+
+</html>
